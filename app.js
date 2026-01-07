@@ -1,99 +1,146 @@
 // ==================== Newspaper Data ====================
 const newspapers = [
-    // বাংলা (Bangladesh)
+    // বাংলা (Bangladesh) - Top dailies ordered by popularity & circulation
     { id: 'prothom-alo', name: 'Prothom Alo', banglaName: 'প্রথম আলো', url: 'https://www.prothomalo.com/', category: 'bangladesh', isPopular: true },
+    { id: 'bangladesh-protidin', name: 'Bangladesh Pratidin', banglaName: 'বাংলাদেশ প্রতিদিন', url: 'https://www.bd-pratidin.com/', category: 'bangladesh', isPopular: true },
     { id: 'jugantor', name: 'Jugantor', banglaName: 'যুগান্তর', url: 'https://www.jugantor.com/', category: 'bangladesh', isPopular: true },
-    { id: 'somokal', name: 'Somokal', banglaName: 'সমকাল', url: 'https://samakal.com/', category: 'bangladesh', isPopular: true },
-    { id: 'the-daily-star-bangla', name: 'The Daily Star Bangla', banglaName: 'দ্য ডেইলি স্টার বাংলা', url: 'https://bangla.thedailystar.net/', category: 'bangladesh', isPopular: true },
-    { id: 'manabjamin', name: 'Manabjamin', banglaName: 'মানবজমিন', url: 'https://mzamin.com/', category: 'bangladesh', isPopular: false },
-    { id: 'ettefaq', name: 'Ettefaq', banglaName: 'ইত্তেফাক', url: 'https://www.ittefaq.com.bd/', category: 'bangladesh', isPopular: true },
     { id: 'kaler-kontho', name: 'Kaler Kantho', banglaName: 'কালের কণ্ঠ', url: 'https://www.kalerkantho.com/', category: 'bangladesh', isPopular: true },
-    { id: 'bangladesh-protidin', name: 'Bangladesh Protidin', banglaName: 'বাংলাদেশ প্রতিদিন', url: 'https://www.bd-pratidin.com/', category: 'bangladesh', isPopular: true },
-    { id: 'amader-somoy', name: 'Amader Somoy', banglaName: 'আমাদের সময়', url: 'https://www.amadershomoy.com/', category: 'bangladesh', isPopular: false },
-    { id: 'protidiner-bangladesh', name: 'Protidiner Bangladesh', banglaName: 'প্রতিদিনের বাংলাদেশ', url: 'https://www.protidinerbangladesh.com/', category: 'bangladesh', isPopular: false },
-    { id: 'desh-rupantor', name: 'Desh Rupantor', banglaName: 'দেশ রূপান্তর', url: 'https://www.deshrupantor.com/', category: 'bangladesh', isPopular: false },
-    { id: 'bangladesh-journal', name: 'Bangladesh Journal', banglaName: 'বাংলাদেশ জার্নাল', url: 'https://www.bd-journal.com/', category: 'bangladesh', isPopular: false },
-    { id: 'bdnews24-bd', name: 'BDNews24', banglaName: 'বিডিনিউজ২৪', url: 'https://bangla.bdnews24.com/', category: 'bangladesh', isPopular: true },
-    { id: 'ajker-potrika', name: 'Ajker Potrika', banglaName: 'আজকের পত্রিকা', url: 'https://www.ajkerpatrika.com/', category: 'bangladesh', isPopular: false },
-    { id: 'kalbela', name: 'Kalbela', banglaName: 'কালবেলা', url: 'https://www.kalbela.com/', category: 'bangladesh', isPopular: false },
-    { id: 'noyadigonta', name: 'Noya Digonta', banglaName: 'নয়া দিগন্ত', url: 'https://www.dailynayadiganta.com/', category: 'bangladesh', isPopular: false },
-    { id: 'inkilab', name: 'Inkilab', banglaName: 'ইনকিলাব', url: 'https://dailyinqilab.com/', category: 'bangladesh', isPopular: false },
-    { id: 'jay-jay-din', name: 'Jay Jay Din', banglaName: 'যায়যায়দিন', url: 'https://www.jaijaidinbd.com/', category: 'bangladesh', isPopular: false },
-    { id: 'doinik-bangla', name: 'Doinik Bangla', banglaName: 'দৈনিক বাংলা', url: 'https://www.doinikbangla.com/', category: 'bangladesh', isPopular: false },
+    { id: 'somokal', name: 'Samakal', banglaName: 'সমকাল', url: 'https://samakal.com/', category: 'bangladesh', isPopular: true },
+    { id: 'ettefaq', name: 'Ittefaq', banglaName: 'ইত্তেফাক', url: 'https://www.ittefaq.com.bd/', category: 'bangladesh', isPopular: true },
+    { id: 'manabjamin', name: 'Manab Zamin', banglaName: 'মানবজমিন', url: 'https://mzamin.com/', category: 'bangladesh', isPopular: true },
     { id: 'bhorer-kagoj', name: 'Bhorer Kagoj', banglaName: 'ভোরের কাগজ', url: 'https://www.bhorerkagoj.com/', category: 'bangladesh', isPopular: true },
-    { id: 'jonokontho', name: 'Jonokontho', banglaName: 'জনকন্ঠ', url: 'https://www.jonokontho.com/', category: 'bangladesh', isPopular: false },
-    { id: 'odhikar', name: 'Odhikar', banglaName: 'অধিকার', url: 'https://odhikar.org/', category: 'bangladesh', isPopular: false },
-    { id: 'oparejeyo-bangla', name: 'Oparejeyo Bangla', banglaName: 'অপরাজেয় বাংলা', url: 'https://www.aparajeobangla.com/', category: 'bangladesh', isPopular: false },
-    { id: 'dhaka-today-bd', name: 'Dhaka Today', banglaName: 'ঢাকা টুডে', url: 'https://www.dhakatoday.com/', category: 'bangladesh', isPopular: false },
-    { id: 'barta-24', name: 'Barta 24', banglaName: 'বার্তা ২৪', url: 'https://www.barta24.com/', category: 'bangladesh', isPopular: false },
+    { id: 'jonokontho', name: 'Janakantha', banglaName: 'জনকণ্ঠ', url: 'https://www.jonokontho.com/', category: 'bangladesh', isPopular: true },
+    { id: 'noyadigonta', name: 'Naya Diganta', banglaName: 'নয়া দিগন্ত', url: 'https://www.dailynayadiganta.com/', category: 'bangladesh', isPopular: true },
+    { id: 'inkilab', name: 'Daily Inqilab', banglaName: 'দৈনিক ইনকিলাব', url: 'https://dailyinqilab.com/', category: 'bangladesh', isPopular: true },
+    { id: 'kalbela', name: 'Kalbela', banglaName: 'কালবেলা', url: 'https://www.kalbela.com/', category: 'bangladesh', isPopular: false },
+    { id: 'ajker-potrika', name: 'Ajker Patrika', banglaName: 'আজকের পত্রিকা', url: 'https://www.ajkerpatrika.com/', category: 'bangladesh', isPopular: false },
+    { id: 'jay-jay-din', name: 'Jaijaidin', banglaName: 'যায়যায়দিন', url: 'https://www.jaijaidinbd.com/', category: 'bangladesh', isPopular: false },
+    { id: 'amader-somoy', name: 'Amader Somoy', banglaName: 'আমাদের সময়', url: 'https://www.amadershomoy.com/', category: 'bangladesh', isPopular: false },
+    { id: 'doinik-bangla', name: 'Dainik Bangla', banglaName: 'দৈনিক বাংলা', url: 'https://www.doinikbangla.com/', category: 'bangladesh', isPopular: false },
+    { id: 'protidiner-bangladesh', name: 'Protidiner Bangladesh', banglaName: 'প্রতিদিনের বাংলাদেশ', url: 'https://www.protidinerbangladesh.com/', category: 'bangladesh', isPopular: false },
+    { id: 'sangram', name: 'Sangram', banglaName: 'সংগ্রাম', url: 'https://www.dainik-sangram.com/', category: 'bangladesh', isPopular: false },
+    { id: 'destiny', name: 'Destiny', banglaName: 'ডেসটিনি', url: 'https://www.dailydestiny.com/', category: 'bangladesh', isPopular: false },
+    { id: 'banglar-dak', name: 'Banglar Dak', banglaName: 'বাংলার ডাক', url: 'https://www.banglardak.com/', category: 'bangladesh', isPopular: false },
 
     // ইংরেজি (English)
     { id: 'the-daily-star', name: 'The Daily Star', banglaName: 'দ্য ডেইলি স্টার', url: 'https://www.thedailystar.net/', category: 'english', isPopular: true },
-    { id: 'the-bangladesh-today', name: 'The Bangladesh Today', banglaName: 'দ্য বাংলাদেশ টুডে', url: 'https://thebangladeshtoday.com/', category: 'english', isPopular: false },
-    { id: 'bangladesh-sangbad-sangstha', name: 'Bangladesh Sangbad Sangstha', banglaName: 'বাংলাদেশ সংবাদ সংস্থা', url: 'https://www.bssnews.net/', category: 'english', isPopular: true },
-    { id: 'new-age', name: 'New Age', banglaName: 'নিউ এজ', url: 'https://www.newagebd.net/', category: 'english', isPopular: true },
-    { id: 'bangla-news-24-en', name: 'Bangla News 24', banglaName: 'বাংলা নিউজ ২৪', url: 'https://www.banglanews24.com/english/', category: 'english', isPopular: true },
-    { id: 'united-news-of-bangladesh', name: 'United News of Bangladesh', banglaName: 'ইউনাইটেড নিউজ অফ বাংলাদেশ', url: 'https://unb.com.bd/', category: 'english', isPopular: true },
-    { id: 'daily-sun', name: 'Daily Sun', banglaName: 'ডেইলি সান', url: 'https://www.daily-sun.com/', category: 'english', isPopular: true },
     { id: 'dhaka-tribune-en', name: 'Dhaka Tribune', banglaName: 'ঢাকা ট্রিবিউন', url: 'https://www.dhakatribune.com/', category: 'english', isPopular: true },
+    { id: 'daily-sun', name: 'Daily Sun', banglaName: 'ডেইলি সান', url: 'https://www.daily-sun.com/', category: 'english', isPopular: true },
+    { id: 'new-age', name: 'New Age', banglaName: 'নিউ এজ', url: 'https://www.newagebd.net/', category: 'english', isPopular: true },
     { id: 'prothom-alo-english', name: 'Prothom Alo English', banglaName: 'প্রথম আলো ইংরেজি', url: 'https://en.prothomalo.com/', category: 'english', isPopular: true },
     { id: 'daily-asian-age', name: 'Daily Asian Age', banglaName: 'ডেইলি এশিয়ান এজ', url: 'https://dailyasianage.com/', category: 'english', isPopular: false },
-    { id: 'bangladesh-post', name: 'Bangladesh Post', banglaName: 'বাংলাদেশ পোস্ট', url: 'https://www.bangladeshpost.net/', category: 'english', isPopular: false },
     { id: 'daily-observer', name: 'Daily Observer', banglaName: 'ডেইলি অবজারভার', url: 'https://www.observerbd.com/', category: 'english', isPopular: false },
+    { id: 'bangladesh-post', name: 'Bangladesh Post', banglaName: 'বাংলাদেশ পোস্ট', url: 'https://www.bangladeshpost.net/', category: 'english', isPopular: false },
+    { id: 'independent', name: 'The Independent', banglaName: 'দ্য ইন্ডিপেনডেন্ট', url: 'https://www.theindependentbd.com/', category: 'english', isPopular: false },
+    { id: 'financial-express', name: 'The Financial Express', banglaName: 'দ্য ফাইন্যান্সিয়াল এক্সপ্রেস', url: 'https://thefinancialexpress.com.bd/', category: 'english', isPopular: false },
+    { id: 'business-standard', name: 'The Business Standard', banglaName: 'দ্য বিজনেস স্ট্যান্ডার্ড', url: 'https://www.tbsnews.net/', category: 'english', isPopular: false },
+    { id: 'united-news-bd', name: 'UNB News', banglaName: 'ইউএনবি', url: 'https://unb.com.bd/', category: 'english', isPopular: false },
+    { id: 'bss-news', name: 'BSS News', banglaName: 'বিএসএস', url: 'https://www.bssnews.net/', category: 'english', isPopular: false },
 
-    // আঞ্চলিক (Regional)
-    { id: 'doinik-azadi', name: 'Doinik Azadi', banglaName: 'দৈনিক আজাদী', url: 'https://dainikazadi.net/', category: 'regional', isPopular: false },
-    { id: 'doinik-purbokon', name: 'Doinik Purbokon', banglaName: 'দৈনিক পূর্বকোণ', url: 'https://dainikpurbokone.net/', category: 'regional', isPopular: false },
-    { id: 'doinik-amader-cumilla', name: 'Doinik Amader Cumilla', banglaName: 'দৈনিক আমাদের কুমিল্লা', url: 'https://www.dailyamadercomilla.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-purbanchol', name: 'Doinik Purbanchol', banglaName: 'দৈনিক পূর্বাঞ্চল', url: 'https://purbanchal.com/', category: 'regional', isPopular: false },
-    { id: 'coxbazar-news', name: 'Coxbazar News', banglaName: 'কক্সবাজার নিউজ', url: 'https://www.coxsbazarnews.com/', category: 'regional', isPopular: false },
-    { id: 'ukhiya-news', name: 'Ukhiya News', banglaName: 'উখিয়া নিউজ', url: 'https://ukhiyanews.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-matha-vanga', name: 'Doinik Matha Vanga', banglaName: 'দৈনিক মাথাভাঙ্গা', url: 'https://mathabhanga.com/', category: 'regional', isPopular: false },
-    { id: 'rajsahi-news-24', name: 'Rajsahi News 24', banglaName: 'রাজশাহী নিউজ ২৪', url: 'https://rajshahinews24.com/', category: 'regional', isPopular: false },
+    // আঞ্চলিক (Regional) - District & divisional newspapers
+    { id: 'doinik-azadi', name: 'Dainik Azadi', banglaName: 'দৈনিক আজাদী', url: 'https://dainikazadi.net/', category: 'regional', isPopular: false },
+    { id: 'doinik-purbokon', name: 'Dainik Purbokone', banglaName: 'দৈনিক পূর্বকোণ', url: 'https://dainikpurbokone.net/', category: 'regional', isPopular: false },
+    { id: 'doinik-purbanchol', name: 'Dainik Purbanchal', banglaName: 'দৈনিক পূর্বাঞ্চল', url: 'https://purbanchal.com/', category: 'regional', isPopular: false },
     { id: 'chattagram-news', name: 'Chattagram News', banglaName: 'চট্টগ্রাম নিউজ', url: 'https://ctgnews.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-korotowa', name: 'Doinik Korotowa', banglaName: 'দৈনিক করতোয়া', url: 'https://dailykaratoa.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-khoyai', name: 'Doinik Khoyai', banglaName: 'দৈনিক খোয়াই', url: 'https://dailykhowai.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-shylet', name: 'Doinik Shylet', banglaName: 'দৈনিক সিলেট', url: 'https://dainiksylhet.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-coxbazar', name: 'Doinik Coxbazar', banglaName: 'দৈনিক কক্সবাজার', url: 'https://www.dainikcoxsbazar.com/index.php', category: 'regional', isPopular: false },
-    { id: 'doinik-ajker-jamalpur', name: 'Doinik Ajker Jamalpur', banglaName: 'দৈনিক আজকের জামালপুর', url: 'https://ajkerjamalpur.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-coxbazar', name: "Dainik Cox's Bazar", banglaName: 'দৈনিক কক্সবাজার', url: 'https://www.dainikcoxsbazar.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-shylet', name: 'Dainik Sylhet', banglaName: 'দৈনিক সিলেট', url: 'https://dainiksylhet.com/', category: 'regional', isPopular: false },
     { id: 'surma-times', name: 'Surma Times', banglaName: 'সুরমা টাইমস', url: 'https://surmatimes.com/', category: 'regional', isPopular: false },
-    { id: 'daily-shylet', name: 'Daily Shylet', banglaName: 'ডেইলি সিলেট', url: 'https://dailysylhet.com/', category: 'regional', isPopular: false },
-    { id: 'chadpur-times', name: 'Chadpur Times', banglaName: 'চাঁদপুর টাইমস', url: 'https://chandpurtimes.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-khoyai', name: 'Dainik Khowai', banglaName: 'দৈনিক খোয়াই', url: 'https://dailykhowai.com/', category: 'regional', isPopular: false },
+    { id: 'sylhet-view', name: 'Sylhet View', banglaName: 'সিলেট ভিউ', url: 'https://sylhetview.com/', category: 'regional', isPopular: false },
+    { id: 'rajsahi-news-24', name: 'Rajshahi News 24', banglaName: 'রাজশাহী নিউজ ২৪', url: 'https://rajshahinews24.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-korotowa', name: 'Dainik Karatoa', banglaName: 'দৈনিক করতোয়া', url: 'https://dailykaratoa.com/', category: 'regional', isPopular: false },
     { id: 'bogura-sangbad', name: 'Bogura Sangbad', banglaName: 'বগুড়া সংবাদ', url: 'https://bograsangbad.com/', category: 'regional', isPopular: false },
-    { id: 'rajsahi-somoy', name: 'Rajsahi Somoy', banglaName: 'রাজশাহী সময়', url: 'https://www.rajshahirsomoy.com/', category: 'regional', isPopular: false },
-    { id: 'amar-noyakhali', name: 'Amar Noyakhali', banglaName: 'আমার নোয়াখালী', url: 'https://amarnoakhali.com/', category: 'regional', isPopular: false },
-    { id: 'lakkhipur-24', name: 'Lakkhipur 24', banglaName: 'লক্ষ্মীপুর ২৪', url: 'https://lakshmipur24.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-khulnachal', name: 'Doinik Khulnachal', banglaName: 'দৈনিক খুলনাঞ্চল', url: 'https://khulnanchal.com/', category: 'regional', isPopular: false },
-    { id: 'doinik-gramer-kagoj', name: 'Doinik Gramer Kagoj', banglaName: 'দৈনিক গ্রামের কাগজ', url: 'https://gramerkagoj.com/', category: 'regional', isPopular: false },
+    { id: 'rajsahi-somoy', name: 'Rajshahi Somoy', banglaName: 'রাজশাহী সময়', url: 'https://www.rajshahirsomoy.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-khulnachal', name: 'Dainik Khulnanchal', banglaName: 'দৈনিক খুলনাঞ্চল', url: 'https://khulnanchal.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-gramer-kagoj', name: 'Dainik Gramer Kagoj', banglaName: 'দৈনিক গ্রামের কাগজ', url: 'https://gramerkagoj.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-amader-cumilla', name: 'Dainik Amader Comilla', banglaName: 'দৈনিক আমাদের কুমিল্লা', url: 'https://www.dailyamadercomilla.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-ajker-jamalpur', name: 'Dainik Ajker Jamalpur', banglaName: 'দৈনিক আজকের জামালপুর', url: 'https://ajkerjamalpur.com/', category: 'regional', isPopular: false },
+    { id: 'amar-noyakhali', name: 'Amar Noakhali', banglaName: 'আমার নোয়াখালী', url: 'https://amarnoakhali.com/', category: 'regional', isPopular: false },
+    { id: 'lakkhipur-24', name: 'Lakshmipur 24', banglaName: 'লক্ষ্মীপুর ২৪', url: 'https://lakshmipur24.com/', category: 'regional', isPopular: false },
+    { id: 'chadpur-times', name: 'Chandpur Times', banglaName: 'চাঁদপুর টাইমস', url: 'https://chandpurtimes.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-rangpur', name: 'Dainik Rangpur', banglaName: 'দৈনিক রংপুর', url: 'https://dainikrangpur.com/', category: 'regional', isPopular: false },
+    { id: 'doinik-dinajpur', name: 'Dainik Dinajpur', banglaName: 'দৈনিক দিনাজপুর', url: 'https://dainikdinajpur.com/', category: 'regional', isPopular: false },
+    { id: 'barisal-tribune', name: 'Barisal Tribune', banglaName: 'বরিশাল ট্রিবিউন', url: 'https://barisaltribune.com/', category: 'regional', isPopular: false },
+    { id: 'mymensingh-protidin', name: 'Mymensingh Pratidin', banglaName: 'ময়মনসিংহ প্রতিদিন', url: 'https://mymensinghpratidin.com/', category: 'regional', isPopular: false },
 
     // অনলাইন (Online)
     { id: 'bdnews24', name: 'BDNews24', banglaName: 'বিডিনিউজ২৪', url: 'https://bangla.bdnews24.com/', category: 'online', isPopular: true },
-    { id: 'bd24live', name: 'BD 24 Live', banglaName: 'বিডি ২৪ লাইভ', url: 'https://www.bd24live.com/', category: 'online', isPopular: true },
-    { id: 'bangla-tribune', name: 'Bangla Tribune', banglaName: 'বাংলা ট্রিবিউন', url: 'https://www.banglatribune.com/', category: 'online', isPopular: true },
-    { id: 'bangla-news-24', name: 'Bangla News 24', banglaName: 'বাংলা নিউজ ২৪', url: 'https://www.banglanews24.com/', category: 'online', isPopular: true },
+    { id: 'bangla-news-24', name: 'Banglanews24', banglaName: 'বাংলানিউজ২৪', url: 'https://www.banglanews24.com/', category: 'online', isPopular: true },
     { id: 'jagonews24', name: 'JagoNews24', banglaName: 'জাগোনিউজ২৪', url: 'https://www.jagonews24.com/', category: 'online', isPopular: true },
+    { id: 'risingbd', name: 'Risingbd', banglaName: 'রাইজিংবিডি', url: 'https://www.risingbd.com/', category: 'online', isPopular: true },
+    { id: 'bangla-tribune', name: 'Bangla Tribune', banglaName: 'বাংলা ট্রিবিউন', url: 'https://www.banglatribune.com/', category: 'online', isPopular: true },
     { id: 'dhaka-post', name: 'Dhaka Post', banglaName: 'ঢাকা পোস্ট', url: 'https://www.dhakapost.com/', category: 'online', isPopular: true },
-    { id: 'rising-bd', name: 'Rising BD', banglaName: 'রাইজিং বিডি', url: 'https://www.risingbd.com/', category: 'online', isPopular: true },
-    { id: 'sarabangla', name: 'Sarabangla.net', banglaName: 'সারাবাংলা.নেট', url: 'https://sarabangla.net/', category: 'online', isPopular: false },
-    { id: 'dhaka-times', name: 'Dhaka Times', banglaName: 'ঢাকা টাইমস', url: 'https://www.dhakatimes24.com/', category: 'online', isPopular: false },
-    { id: 'dhaka-tribune', name: 'Dhaka Tribune', banglaName: 'ঢাকা ট্রিবিউন', url: 'https://www.dhakatribune.com/', category: 'online', isPopular: true },
+    { id: 'bd24live', name: 'BD 24 Live', banglaName: 'বিডি ২৪ লাইভ', url: 'https://www.bd24live.com/', category: 'online', isPopular: false },
+    { id: 'sarabangla', name: 'Sarabangla', banglaName: 'সারাবাংলা', url: 'https://sarabangla.net/', category: 'online', isPopular: false },
     { id: 'priyo', name: 'Priyo.com', banglaName: 'প্রিয়.কম', url: 'https://www.priyo.com/', category: 'online', isPopular: false },
-    { id: 'the-dhaka-times', name: 'The Dhaka Times', banglaName: 'দ্য ঢাকা টাইমস', url: 'https://thedhakatimes.com/', category: 'online', isPopular: false },
-    { id: 'somoyer-konthosor', name: 'Somoyer Konthosor', banglaName: 'সময়ের কণ্ঠস্বর', url: 'https://www.somoyerkonthosor.com/', category: 'online', isPopular: false },
-    { id: 'artho-suchak', name: 'Artho Suchak', banglaName: 'অর্থসূচক', url: 'https://www.arthosuchak.com/', category: 'online', isPopular: false },
-    { id: 'share-news-24', name: 'Share News 24', banglaName: 'শেয়ার নিউজ ২৪', url: 'https://www.sharenews24.com/', category: 'online', isPopular: false },
-    { id: 'sun-bd-24', name: 'Sun BD 24', banglaName: 'সান বিডি ২৪', url: 'https://sunbd24.com/', category: 'online', isPopular: false },
-    { id: 'ajker-sotta-sangbad-24', name: 'Ajker Sotta Sangbad 24', banglaName: 'আজকের সত্য সংবাদ ২৪', url: 'https://ajkersottasangbad24.com/', category: 'online', isPopular: false },
-    { id: 'one-news-bd', name: 'One News BD', banglaName: 'ওয়ান নিউজ বিডি', url: 'https://onenewsbd.com/', category: 'online', isPopular: false },
-    { id: 'desh-news', name: 'Desh News', banglaName: 'দেশ নিউজ', url: 'https://deshnews.net/', category: 'online', isPopular: false },
-    { id: 'desher-sangbad', name: 'Desher Sangbad', banglaName: 'দেশের সংবাদ', url: 'https://www.deshersangbad.com/', category: 'online', isPopular: false },
-    { id: 'bangla-daily-24', name: 'Bangla Daily 24', banglaName: 'বাংলা ডেইলি ২৪', url: 'https://bangladaily24.com/', category: 'online', isPopular: false },
     { id: 'protikhon', name: 'Protikhon', banglaName: 'প্রতিক্ষণ', url: 'https://www.protikhon.com/', category: 'online', isPopular: false },
+    { id: 'barta-24', name: 'Barta24', banglaName: 'বার্তা২৪', url: 'https://www.barta24.com/', category: 'online', isPopular: false },
+    { id: 'dhaka-times', name: 'Dhaka Times', banglaName: 'ঢাকা টাইমস', url: 'https://www.dhakatimes24.com/', category: 'online', isPopular: false },
+    { id: 'news-bangla-24', name: 'News Bangla 24', banglaName: 'নিউজ বাংলা ২৪', url: 'https://www.newsbangla24.com/', category: 'online', isPopular: false },
+    { id: 'somoyer-konthosor', name: 'Somoyer Konthosor', banglaName: 'সময়ের কণ্ঠস্বর', url: 'https://www.somoyerkonthosor.com/', category: 'online', isPopular: false },
+    { id: 'desh-rupantor-online', name: 'Desh Rupantor Online', banglaName: 'দেশ রূপান্তর অনলাইন', url: 'https://deshrupantor.com/', category: 'online', isPopular: false },
     { id: 'barta-bangla', name: 'Barta Bangla', banglaName: 'বার্তা বাংলা', url: 'https://bartabangla.com/', category: 'online', isPopular: false },
-    { id: 'snn24', name: 'SNN24', banglaName: 'এসএনএন২৪', url: 'https://snn24.com/', category: 'online', isPopular: false },
-    { id: 'alert-news-24', name: 'Alert News 24', banglaName: 'অ্যালার্ট নিউজ ২৪', url: 'https://alertnews24.com/', category: 'online', isPopular: false },
-    { id: 'khobor-protidin-24', name: 'Khobor Protidin 24', banglaName: 'খবর প্রতিদিন ২৪', url: 'https://khoborprotidin24.com/', category: 'online', isPopular: false },
-    { id: 'bbc-24-news', name: 'BBC 24 News', banglaName: 'বিবিসি ২৪ নিউজ', url: 'https://bbc24news.com/', category: 'online', isPopular: false }
+
+    // টিভি চ্যানেল (TV Channels)
+    { id: 'somoy-tv', name: 'Somoy TV', banglaName: 'সময় টিভি', url: 'https://www.somoynews.tv/', category: 'tv', isPopular: true },
+    { id: 'jamuna-tv', name: 'Jamuna TV', banglaName: 'যমুনা টিভি', url: 'https://www.jamuna.tv/', category: 'tv', isPopular: true },
+    { id: 'ntv', name: 'NTV', banglaName: 'এনটিভি', url: 'https://www.ntvbd.com/', category: 'tv', isPopular: true },
+    { id: 'channel-24', name: 'Channel 24', banglaName: 'চ্যানেল ২৪', url: 'https://www.channel24bd.tv/', category: 'tv', isPopular: true },
+    { id: 'atn-news', name: 'ATN News', banglaName: 'এটিএন নিউজ', url: 'https://www.atnnewstv.com/', category: 'tv', isPopular: true },
+    { id: 'independent-tv', name: 'Independent TV', banglaName: 'ইন্ডিপেন্ডেন্ট টিভি', url: 'https://www.independenttv.com/', category: 'tv', isPopular: true },
+    { id: 'ekattor-tv', name: 'Ekattor TV', banglaName: 'একাত্তর টিভি', url: 'https://ekattor.tv/', category: 'tv', isPopular: true },
+    { id: 'dbc-news', name: 'DBC News', banglaName: 'ডিবিসি নিউজ', url: 'https://www.dbcnews.tv/', category: 'tv', isPopular: true },
+    { id: 'news24', name: 'News24', banglaName: 'নিউজ২৪', url: 'https://www.news24bd.tv/', category: 'tv', isPopular: true },
+    { id: 'channel-i', name: 'Channel i', banglaName: 'চ্যানেল আই', url: 'https://www.channelionline.com/', category: 'tv', isPopular: true },
+    { id: 'atn-bangla', name: 'ATN Bangla', banglaName: 'এটিএন বাংলা', url: 'https://www.atnbangla.tv/', category: 'tv', isPopular: false },
+    { id: 'rtv', name: 'RTV', banglaName: 'আরটিভি', url: 'https://www.rtvonline.com/', category: 'tv', isPopular: false },
+    { id: 'boishakhi-tv', name: 'Boishakhi TV', banglaName: 'বৈশাখী টিভি', url: 'https://www.boishakhionline.com/', category: 'tv', isPopular: false },
+    { id: 'maasranga-tv', name: 'Maasranga TV', banglaName: 'মাসরাঙ্গা টিভি', url: 'https://www.maasranga.tv/', category: 'tv', isPopular: false },
+    { id: 'sa-tv', name: 'SA TV', banglaName: 'এসএ টিভি', url: 'https://www.satv.tv/', category: 'tv', isPopular: false },
+    { id: 'asian-tv', name: 'Asian TV', banglaName: 'এশিয়ান টিভি', url: 'https://asiantv.com.bd/', category: 'tv', isPopular: false },
+    { id: 'bangla-vision', name: 'Bangla Vision', banglaName: 'বাংলা ভিশন', url: 'https://www.bvnews24.com/', category: 'tv', isPopular: false },
+    { id: 'my-tv', name: 'MY TV', banglaName: 'মাইটিভি', url: 'https://www.mytv.com.bd/', category: 'tv', isPopular: false },
+    { id: 'gazi-tv', name: 'Gazi TV', banglaName: 'গাজী টিভি', url: 'https://www.gazitv.com/', category: 'tv', isPopular: false },
+    { id: 'mohona-tv', name: 'Mohona TV', banglaName: 'মহানা টিভি', url: 'https://mohonatv.com/', category: 'tv', isPopular: false },
+
+    // রেডিও (Radio)
+    { id: 'radio-today', name: 'Radio Today', banglaName: 'রেডিও টুডে', url: 'https://www.radiotoday.fm/', category: 'radio', isPopular: true },
+    { id: 'abc-radio', name: 'ABC Radio', banglaName: 'এবিসি রেডিও', url: 'https://www.abcradio.fm/', category: 'radio', isPopular: true },
+    { id: 'radio-foorti', name: 'Radio Foorti', banglaName: 'রেডিও ফুর্তি', url: 'https://www.radiofoorti.fm/', category: 'radio', isPopular: true },
+    { id: 'radio-aamar', name: 'Radio Aamar', banglaName: 'রেডিও আমার', url: 'https://www.radioaamar.fm/', category: 'radio', isPopular: false },
+    { id: 'jago-fm', name: 'Jago FM', banglaName: 'জাগো এফএম', url: 'https://www.jago-fm.com/', category: 'radio', isPopular: false },
+    { id: 'dhoni-radio', name: 'Dhoni Radio', banglaName: 'ধ্বনি রেডিও', url: 'https://www.dhaka.fm/', category: 'radio', isPopular: false },
+    { id: 'peoples-radio', name: 'Peoples Radio', banglaName: 'পিপলস রেডিও', url: 'https://www.peoplesradio91.fm/', category: 'radio', isPopular: false },
+    { id: 'radio-capital', name: 'Radio Capital', banglaName: 'রেডিও ক্যাপিটাল', url: 'https://www.radiocapital.fm/', category: 'radio', isPopular: false },
+
+    // ব্যবসা/অর্থনীতি (Business/Finance)
+    { id: 'artho-suchak', name: 'Arthosuchak', banglaName: 'অর্থসূচক', url: 'https://www.arthosuchak.com/', category: 'business', isPopular: true },
+    { id: 'share-biz', name: 'Share Biz', banglaName: 'শেয়ারবিজ', url: 'https://www.sharebiz.net/', category: 'business', isPopular: true },
+    { id: 'amader-orthoneeti', name: 'Amader Orthoneeti', banglaName: 'আমাদের অর্থনীতি', url: 'https://www.amarorthoneeti.com/', category: 'business', isPopular: false },
+    { id: 'dse-news', name: 'DSE News', banglaName: 'ডিএসই নিউজ', url: 'https://www.dse.com.bd/', category: 'business', isPopular: false },
+    { id: 'business-insider-bd', name: 'Business Insider Bangladesh', banglaName: 'বিজনেস ইনসাইডার বাংলাদেশ', url: 'https://www.businessinsiderbd.com/', category: 'business', isPopular: false },
+    { id: 'stock-bangladesh', name: 'Stock Bangladesh', banglaName: 'স্টক বাংলাদেশ', url: 'https://stockbangladesh.com/', category: 'business', isPopular: false },
+
+    // ম্যাগাজিন (Magazines)
+    { id: 'saptahik-2000', name: 'Saptahik 2000', banglaName: 'সাপ্তাহিক ২০০০', url: 'https://www.saptahik2000.com/', category: 'magazine', isPopular: false },
+    { id: 'shaptahik-bichitra', name: 'Saptahik Bichitra', banglaName: 'সাপ্তাহিক বিচিত্রা', url: 'https://bichitra.com.bd/', category: 'magazine', isPopular: false },
+    { id: 'robbar', name: 'Robbar', banglaName: 'রোববার', url: 'https://www.robbar.com/', category: 'magazine', isPopular: false },
+    { id: 'anandalok', name: 'Anandalok', banglaName: 'আনন্দালোক', url: 'https://www.anandalokbd.com/', category: 'magazine', isPopular: false },
+    { id: 'kishor-alo', name: 'Kishor Alo', banglaName: 'কিশোরআলো', url: 'https://www.kishoralo.com/', category: 'magazine', isPopular: false },
+    { id: 'click-ittefaq', name: 'Click Ittefaq', banglaName: 'ক্লিক ইত্তেফাক', url: 'https://www.clickittefaq.com/', category: 'magazine', isPopular: false },
+
+    // আন্তর্জাতিক (International)
+    { id: 'bbc-bangla', name: 'BBC Bangla', banglaName: 'বিবিসি বাংলা', url: 'https://www.bbc.com/bengali', category: 'international', isPopular: true },
+    { id: 'dw-bengali', name: 'DW Bengali', banglaName: 'ডয়চে ভেলে বাংলা', url: 'https://www.dw.com/bn/', category: 'international', isPopular: true },
+    { id: 'voa-bangla', name: 'VOA Bangla', banglaName: 'ভিওএ বাংলা', url: 'https://www.voabengali.com/', category: 'international', isPopular: true },
+    { id: 'anandabazar', name: 'Anandabazar Patrika', banglaName: 'আনন্দবাজার পত্রিকা', url: 'https://www.anandabazar.com/', category: 'international', isPopular: true },
+    { id: 'ei-samay', name: 'Ei Samay', banglaName: 'এই সময়', url: 'https://eisamay.com/', category: 'international', isPopular: false },
+    { id: 'zee-24-ghanta', name: 'Zee 24 Ghanta', banglaName: 'জি ২৪ ঘণ্টা', url: 'https://zeenews.india.com/bengali', category: 'international', isPopular: false },
+    { id: 'bartaman', name: 'Bartaman', banglaName: 'বর্তমান', url: 'https://www.bartamanpatrika.com/', category: 'international', isPopular: false },
+    { id: 'aajkaal', name: 'Aajkaal', banglaName: 'আজকাল', url: 'https://www.aajkaal.in/', category: 'international', isPopular: false },
+    { id: 'jugashankha', name: 'Jugashankha', banglaName: 'যুগশঙ্খ', url: 'https://www.jugasankha.com/', category: 'international', isPopular: false },
+    { id: 'sangbad-pratidin', name: 'Sangbad Pratidin', banglaName: 'সংবাদ প্রতিদিন', url: 'https://www.sangbadpratidin.in/', category: 'international', isPopular: false },
+    { id: 'al-jazeera-bengali', name: 'Al Jazeera Bengali', banglaName: 'আল জাজিরা বাংলা', url: 'https://www.aljazeera.com/bengali/', category: 'international', isPopular: false },
 ];
 
 // ==================== State Management ====================
@@ -147,11 +194,11 @@ function openNewspaper(newspaper) {
 function createNewspaperCard(newspaper) {
     const card = document.createElement('div');
     card.className = 'newspaper-card';
-    
+
     const initials = getInitials(newspaper.name);
     const color = getColorFromString(newspaper.name);
     const bookmarked = isBookmarked(newspaper.id);
-    
+
     card.innerHTML = `
         <div class="newspaper-header">
             <div class="newspaper-logo" style="background: ${color}">
@@ -169,21 +216,21 @@ function createNewspaperCard(newspaper) {
         </div>
         <div class="newspaper-category">${getCategoryLabel(newspaper.category)}</div>
     `;
-    
+
     // Click on card to open newspaper
     card.addEventListener('click', (e) => {
         if (!e.target.closest('.bookmark-btn')) {
             openNewspaper(newspaper);
         }
     });
-    
+
     // Bookmark button
     const bookmarkBtn = card.querySelector('.bookmark-btn');
     bookmarkBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleBookmark(newspaper.id);
     });
-    
+
     return card;
 }
 
@@ -192,26 +239,31 @@ function getCategoryLabel(category) {
         'bangladesh': 'বাংলা',
         'english': 'ইংরেজি',
         'regional': 'আঞ্চলিক',
-        'online': 'অনলাইন'
+        'online': 'অনলাইন',
+        'tv': 'টিভি চ্যানেল',
+        'radio': 'রেডিও',
+        'business': 'ব্যবসা',
+        'magazine': 'ম্যাগাজিন',
+        'international': 'আন্তর্জাতিক'
     };
     return labels[category] || category;
 }
 
 function filterNewspapers(category, query = '') {
     let filtered = newspapers;
-    
+
     if (category !== 'all') {
         filtered = filtered.filter(n => n.category === category);
     }
-    
+
     if (query) {
         const lowerQuery = query.toLowerCase();
-        filtered = filtered.filter(n => 
-            n.name.toLowerCase().includes(lowerQuery) || 
+        filtered = filtered.filter(n =>
+            n.name.toLowerCase().includes(lowerQuery) ||
             n.banglaName.includes(query)
         );
     }
-    
+
     return filtered;
 }
 
@@ -237,7 +289,7 @@ function renderSearchScreen() {
 function renderBookmarksScreen() {
     const grid = document.getElementById('bookmarksGrid');
     const emptyState = document.getElementById('emptyBookmarks');
-    
+
     if (bookmarks.length === 0) {
         grid.style.display = 'none';
         emptyState.classList.add('show');
@@ -252,7 +304,7 @@ function renderBookmarksScreen() {
 function renderRecentlyVisited() {
     const grid = document.getElementById('recentlyVisitedGrid');
     const emptyState = document.getElementById('emptyRecent');
-    
+
     if (recentlyVisited.length === 0) {
         grid.style.display = 'none';
         emptyState.classList.add('show');
@@ -289,16 +341,16 @@ function switchScreen(screenId) {
     document.querySelectorAll('.screen').forEach(screen => {
         screen.classList.remove('active');
     });
-    
+
     // Show selected screen
     document.getElementById(screenId).classList.add('active');
-    
+
     // Update nav items
     document.querySelectorAll('.nav-item').forEach(item => {
         item.classList.remove('active');
     });
     document.querySelector(`[data-screen="${screenId}"]`).classList.add('active');
-    
+
     currentScreen = screenId;
     renderCurrentScreen();
 }
@@ -322,10 +374,10 @@ function toggleTheme() {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme
     initTheme();
-    
+
     // Theme toggle
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-    
+
     // Category tabs
     document.querySelectorAll('.category-tab').forEach(tab => {
         tab.addEventListener('click', () => {
@@ -335,21 +387,21 @@ document.addEventListener('DOMContentLoaded', () => {
             renderHomeScreen();
         });
     });
-    
+
     // Bottom navigation
     document.querySelectorAll('.nav-item').forEach(item => {
         item.addEventListener('click', () => {
             switchScreen(item.dataset.screen);
         });
     });
-    
+
     // Search input
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value;
         renderSearchScreen();
     });
-    
+
     // Initial render
     renderCurrentScreen();
 });
